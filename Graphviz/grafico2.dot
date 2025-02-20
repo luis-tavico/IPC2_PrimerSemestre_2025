@@ -1,0 +1,8 @@
+digraph G {
+    A [label="Nodo A", shape=box, color=blue];
+    B [label="Nodo B", shape=circle, color=red];
+    C [label="Nodo C", shape=ellipse, color=green];
+    
+    A -> B [label="A a B", color=purple, penwidth=2];
+    B -> C [label="B a C", color=orange, penwidth=2];
+}

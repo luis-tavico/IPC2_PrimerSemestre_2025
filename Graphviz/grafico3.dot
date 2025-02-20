@@ -1,0 +1,22 @@
+digraph G {
+node [fontname="Helvetica,Arial,sans-serif"]
+a0 [shape=none label=<
+        <TABLE border="0" cellspacing="1" cellpadding="5">
+                <TR>
+                        <TD bgcolor="green">0,0</TD>
+                        <TD bgcolor="green">0,1</TD>
+                        <TD bgcolor="green">0,2</TD>
+                </TR>
+                <TR>
+                        <TD bgcolor="green">1,0</TD>
+                        <TD bgcolor="green">1,1</TD>
+                        <TD bgcolor="green">1,2</TD>
+                </TR>
+                <TR>
+                        <TD bgcolor="green">2,0</TD>
+                        <TD bgcolor="green">2,1</TD>
+                        <TD bgcolor="green">2,2</TD>
+                </TR>
+            </TABLE>
+        >];
+}
