@@ -82,31 +82,30 @@ git revert <commit_hash>
 
 ### Inicializar un Repositorio
 
-Para comenzar a trabajar con Git, primero necesitamos inicializar un repositorio local y configurarlo para trabajar con un repositorio remoto.
-
 ```bash
 # Inicializa un nuevo repositorio local Git en el directorio actual. Esto crea una carpeta oculta llamada .git donde Git almacena toda la informacion del repositorio.
 git init
-
-# Renombra la rama predeterminada a main.
-git branch -M main
-
-# Conecta el repositorio local con un repositorio remoto en la URL especificada.
-git remote add origin <url_del_repositorio_remoto>
 
 # Agrega todos los archivos modificados y nuevos al area de preparacion (staging area).
 git add .
 
 # Crea un commit con los cambios preparados y un mensaje descriptivo.
 git commit -m "mensaje del commit"
+```
+
+### Subir un Repositorio a GitHub
+```bash
+# Conecta el repositorio local con un repositorio remoto en la URL especificada.
+git remote add origin <url_del_repositorio_remoto>
+
+# Renombra la rama predeterminada a main.
+git branch -M main
 
 # Sube los cambios al repositorio remoto y establece la rama main como la rama predeterminada para futuros push. La opcion -u asocia la rama local con la rama remota.
 git push -u origin main
 ```
 
 ### Crear y Trabajar con Ramas
-
-Es recomendable trabajar en ramas dedicadas para el desarrollo, como `develop`, para mantener el codigo principal (main) estable.
 
 ```bash
 # Crea una nueva rama llamada develop.
@@ -115,13 +114,11 @@ git branch develop
 # Cambia a la rama develop para comenzar a trabajar en ella.
 git checkout develop
 
-# Sube la rama develop al repositorio remoto..
+# Sube la rama develop al repositorio remoto.
 git push origin develop
 ```
 
 ### Trabajar en la Rama `develop`
-
-En la rama `develop`, realizamos cambios y confirmamos los avances:
 
 ```bash
 # Hacer cambios en los archivos del proyecto.
@@ -137,8 +134,6 @@ git push origin develop
 ```
 
 ### Crear un Release
-
-Para marcar versiones especificas del proyecto, podemos crear ramas de release lo cual es util para preparar una nueva version del software antes de integrarla a la rama principal (`main`).
 
 ```bash
 # Cambia a la rama "develop" para asegurarno de trabajar desde la ultima version del codigo.
@@ -158,8 +153,6 @@ git push origin release-1.0.0
 ```
 
 ### Fusionar Cambios
-
-Para integrar cambios de una rama a otra, se usa merge o pull..
 
 ```bash
 # Cambiarse a la rama principal (main).
