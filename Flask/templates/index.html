@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menú Flask + Jinja2</title>
+</head>
+<body>
+    <h2>Menú dinámico</h2>
+
+    <!-- Paso 1: Selección de categoría -->
+    <form method="POST">
+        <label>Categoría:</label>
+        <select name="categoria" onchange="this.form.submit()">
+            <option value="">-- Selecciona --</option>
+            {% for cat in categorias %}
+                <option value="{{ cat }}" {% if categoria == cat %}selected{% endif %}>{{ cat }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <!-- Paso 2: Si ya eligió categoría, mostrar opciones -->
+    {% if categoria and not opcion %}
+        <form method="POST">
+            <input type="hidden" name="categoria" value="{{ categoria }}">
+            <label>Opciones de {{ categoria }}:</label>
+            <select name="opcion">
+                {% for op in opciones %}
+                    <option value="{{ op }}">{{ op }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Finalizar</button>
+        </form>
+    {% endif %}
+
+    <!-- Paso 3: Si ya eligió una opción, mostrar resultado -->
+    {% if opcion %}
+        <h3>✅ Seleccionaste {{ opcion }} de la categoría {{ categoria }}</h3>
+    {% endif %}
+</body>
+</html>
