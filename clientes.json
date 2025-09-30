@@ -3,7 +3,7 @@
       "nombre": "Ana Garcia",
       "email": "anagarcia@gmail.com",
       "telefono": "57896321",
-      "direccion": "1 calle 2-40 z.4",
+      "direccion": "10 calle 2-40 z.4",
       "productos_adquiridos": [
           {
               "idProducto": "P001",
