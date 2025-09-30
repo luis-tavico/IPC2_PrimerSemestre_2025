@@ -1,0 +1,28 @@
+{
+  "estudiantes": [
+    {
+      "id": 3,
+      "nombre": "Luis Gomez",
+      "carrera": "Derecho",
+      "edad": 20,
+      "activo": true,
+      "promedio": 70.2
+    },
+    {
+      "id": 4,
+      "nombre": "Ana Martinez",
+      "carrera": "Arquitectura",
+      "edad": 23,
+      "activo": true,
+      "promedio": 85.7
+    },
+    {
+      "id": 5,
+      "nombre": "Carlos Ramirez",
+      "carrera": "Administracion",
+      "edad": 24,
+      "activo": false,
+      "promedio": 65.4
+    }
+  ]
+}
